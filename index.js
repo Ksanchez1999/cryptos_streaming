@@ -1,4 +1,4 @@
-// GLOBAL VARIABLES
+﻿// GLOBAL VARIABLES
 
 let randomPin;
 
@@ -71,12 +71,11 @@ document.querySelectorAll(".buttonStart").forEach(elemento => {
     outputsElements.pin.innerText = inputsValues.pin() ? inputsValues.pin() : randomPin;
     outputsElements.creationDate.innerText = todaysDate();
 
-    document.getElementById("containerInputs").classList.toggle("hidden");
-    document.getElementById("containerButtons").classList.toggle("hidden");    
+    document.getElementById("screen2").classList.remove("hideScreen2");
+    document.getElementById("screen1").classList.remove("showScreen1");
 
-    document.getElementById("containerResultsFirstHalf").classList.toggle("hidden");
-    document.getElementById("containerResultsSecondtHalf").classList.toggle("hidden");
-    document.getElementById("returnIcon").classList.toggle("hidden");
+    document.getElementById("screen2").classList.add("showScreen2");
+    document.getElementById("screen1").classList.add("hideScreen1");
   });
 });
 
@@ -95,12 +94,11 @@ document.querySelectorAll(".copy").forEach(elemento => {
 
 
 document.getElementById("returnIcon").addEventListener("click", function() {
-  document.getElementById("containerInputs").classList.toggle("hidden");
-  document.getElementById("containerButtons").classList.toggle("hidden");    
+    document.getElementById("screen2").classList.remove("showScreen2");
+    document.getElementById("screen1").classList.remove("hideScreen1");
 
-  document.getElementById("containerResultsFirstHalf").classList.toggle("hidden");
-  document.getElementById("containerResultsSecondtHalf").classList.toggle("hidden");
-  document.getElementById("returnIcon").classList.toggle("hidden");
+    document.getElementById("screen2").classList.add("hideScreen2");
+    document.getElementById("screen1").classList.add("showScreen1");
 });
 
 

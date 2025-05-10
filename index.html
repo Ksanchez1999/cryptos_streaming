@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -9,81 +9,67 @@
 </head>
 
 <body>
-  <main>
+  <main id="main">
 
     <!-- Screen 1 -->
 
-    <h1 id="titleScreen1">PLANTILLAS</h1>
+    <article id="screen1">
+
+      <h1 id="titleScreen1">PLANTILLAS</h1>
     
-    <article id="containerInputs">
-      <div>
-        <label for="inputUser" id="labelInputUser">USUARIO</label>
-        <input type="text" id="inputUser">
+       <div id="containerInputs">
+          <input type="text" id="inputUser" placeholder="Usuario">
+          <input type="text" id="inputPassword" placeholder="Contraseña">
+          <input type="text" id="inputProfile" placeholder="Perfil">
+          <input type="text" id="inputPin" placeholder="Pin">
       </div>
 
-      <div>
-        <label for="inputPassword" id="labelInputPassword">CONTRASEÑA</label>
-        <input type="text" id="inputPassword">
-      </div>
 
-      <div>
-        <label for="inputProfile" id="labelInputProfile">PERFIL</label>
-        <input type="text" id="inputProfile">
-      </div>
-
-      <div>
-        <label for="inputPin" id="labelInputPin">PIN</label>
-        <input type="text" id="inputPin">
-      </div>
-    </article>
-
-
-    <article id="containerButtons">
-      <h2 id="titleButtons">SELECCIONA EL SERVICIO</h2>
-
-      <button id="buttonNetflix" class="buttonStart">NETFLIX</button>
-      <button id="buttonDisney" class="buttonStart">DISNEY</button>
-      <button id="buttonHbo" class="buttonStart">HBO MAX</button>
-      <button id="buttonParamount" class="buttonStart">PARAMOUNT</button>
-      <button id="buttonVix" class="buttonStart">VIX</button>
-      <button id="buttonPrime" class="buttonStart">PRIME VIDEO</button>
-      <button id="buttonFlujoTv1Device" class="buttonStart">FLUJO TV (1 DISPOSITIVO)</button>
-      <button id="buttonFlujoTv3Devices" class="buttonStart">FLUJO TV (3 DISPOSITIVOS)</button>
-      <button id="buttonSpotify" class="buttonStart">SPOTIFY</button>
-      <button id="buttonYoutube" class="buttonStart">YOUTUBE PREMIUM</button>
-      <button id="buttonCrunchyroll" class="buttonStart">CRUNCHYROLL</button>
-    </article>
-
-
-
-    <!-- Screen 2 -->
-
-    <article id="containerResultsFirstHalf" class="hidden">
-      <div id="containerOutputProfile">
-        <h2 id="titleOutputProfile">Perfil</h2>
-        <p id="outputProfile" class="copy"></p>
-      </div>
-
-      <div id="containerOutputPin">
-        <h2 id="titleOutputPin">Pin</h2>
-        <p id="outputPin" class="copy"></p>
-      </div>
-
-      <div id="containerOutputCreationDate">
-        <h2 id="titleOutputCreationDate">Fecha de creación</h2>
-        <p id="outputCreationDate" class="copy"></p>
-      </div>
+      <article id="containerButtons">
+        <button id="buttonNetflix" class="buttonStart">NETFLIX</button>
+        <button id="buttonDisney" class="buttonStart">DISNEY</button>
+        <button id="buttonHbo" class="buttonStart">HBO MAX</button>
+        <button id="buttonParamount" class="buttonStart">PARAMOUNT</button>
+        <button id="buttonVix" class="buttonStart">VIX</button>
+        <button id="buttonPrime" class="buttonStart">PRIME VIDEO</button>
+        <button id="buttonFlujoTv1Device" class="buttonStart">FLUJO TV (1 DISPOSITIVO)</button>
+        <button id="buttonFlujoTv3Devices" class="buttonStart">FLUJO TV (3 DISPOSITIVOS)</button>
+        <button id="buttonSpotify" class="buttonStart">SPOTIFY</button>
+        <button id="buttonYoutube" class="buttonStart">YOUTUBE PREMIUM</button>
+        <button id="buttonCrunchyroll" class="buttonStart">CRUNCHYROLL</button>
+      </article>
 
     </article>
 
-    <article id="containerResultsSecondtHalf" class="hidden">
-      <h2 id="titleOutputTemplate">Plantilla</h2>
-      <p id="outputTemplate" class="copy"></p>
+    <article id="screen2">
+      <!-- Screen 2 -->
+
+      <article id="containerResultsFirstHalf">
+        <div id="containerOutputProfile">
+          <h2 id="titleOutputProfile">Perfil</h2>
+          <p id="outputProfile" class="copy"></p>
+        </div>
+
+        <div id="containerOutputPin">
+          <h2 id="titleOutputPin">Pin</h2>
+          <p id="outputPin" class="copy"></p>
+        </div>
+
+        <div id="containerOutputCreationDate">
+          <h2 id="titleOutputCreationDate">Fecha de creación</h2>
+          <p id="outputCreationDate" class="copy"></p>
+        </div>
+      </article>
+
+      <article id="containerResultsSecondtHalf">
+        <h2 id="titleOutputTemplate">Plantilla</h2>
+        <p id="outputTemplate" class="copy"></p>
+      </article>
+
+      <img src="img/returnIcon.png" alt="Icono de retorno" id="returnIcon">
+      <img src="img/copyIcon.png" alt="Icono de retorno" id="copyIcon">
+
     </article>
-
-    <img src="img/returnIcon.png" alt="Icono de retorno" id="returnIcon" class="hidden">
-    <img src="img/copyIcon.png" alt="Icono de retorno" id="copyIcon">
-
   </main>
 
   <script src="index.js"></script>
