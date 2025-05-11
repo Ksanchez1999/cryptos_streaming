@@ -9,9 +9,9 @@ const inputsValues = {
   user: ()=> document.getElementById("inputUser").value,
   password: ()=> document.getElementById("inputPassword").value,
   pin: ()=> document.getElementById("inputPin").value,
-  profile: ()=> document.getElementById("inputProfile").value.toUpperCase()
+  profile: ()=> document.getElementById("inputProfile").value.toUpperCase(),
+  days: ()=> document.getElementById("inputDays").value
 }
-
 
 // OUTPUTS
 
@@ -55,12 +55,17 @@ function todaysDate(){
   return today.toLocaleDateString("es-VE");
 }
 
-function addThirtyDays(){
+function createExpirationDate(){
   let today = new Date();
-  today.setDate(today.getDate() + 30);
-  return today.toLocaleDateString("es-VE");
-}
 
+  if(inputsValues.days()){
+    today.setDate(today.getDate() + parseInt(inputsValues.days(), 10));
+    return today.toLocaleDateString("es-VE");  
+  }
+
+  today.setDate(today.getDate() + 30);
+  return today.toLocaleDateString("es-VE");  
+}
 
 
 // GENERAL LISTENERS
@@ -113,7 +118,7 @@ buttons.netflix.addEventListener("click", function() {
 🔒 ${inputsValues.password()}
 👤 ${inputsValues.profile()}
 🔐 ${inputsValues.pin() ? inputsValues.pin() : randomPin}
-➡️ CADUCA EL ${addThirtyDays()}
+➡️ CADUCA EL ${createExpirationDate()}
 
 𝚂𝙸𝙶𝚄𝙴𝙼𝙴 + 𝙲𝙾𝙼𝙴𝙽𝚃𝙰 + 𝙻𝙸𝙺𝙴 
 
@@ -129,7 +134,7 @@ buttons.disney.addEventListener("click", function() {
 🔒 ${inputsValues.password()}
 👤 ${inputsValues.profile()}
 🔐 ${inputsValues.pin() ? inputsValues.pin() : randomPin}
-➡️ CADUCA EL ${addThirtyDays()}
+➡️ CADUCA EL ${createExpirationDate()}
 
 𝚂𝙸𝙶𝚄𝙴𝙼𝙴 + 𝙲𝙾𝙼𝙴𝙽𝚃𝙰 + 𝙻𝙸𝙺𝙴 
 
@@ -145,7 +150,7 @@ buttons.hbo.addEventListener("click", function() {
 🔒 ${inputsValues.password()}
 👤 ${inputsValues.profile()}
 🔐 ${inputsValues.pin() ? inputsValues.pin() : randomPin}
-➡️ CADUCA EL ${addThirtyDays()}
+➡️ CADUCA EL ${createExpirationDate()}
 
 𝚂𝙸𝙶𝚄𝙴𝙼𝙴 + 𝙲𝙾𝙼𝙴𝙽𝚃𝙰 + 𝙻𝙸𝙺𝙴 
 
@@ -160,7 +165,7 @@ buttons.paramount.addEventListener("click", function() {
 ✉️ ${inputsValues.user()}
 🔒 ${inputsValues.password()}
 👤 ${inputsValues.profile()}
-➡️ CADUCA EL ${addThirtyDays()}
+➡️ CADUCA EL ${createExpirationDate()}
 
 𝚂𝙸𝙶𝚄𝙴𝙼𝙴 + 𝙲𝙾𝙼𝙴𝙽𝚃𝙰 + 𝙻𝙸𝙺𝙴 
 
@@ -177,7 +182,7 @@ buttons.vix.addEventListener("click", function() {
 ✉️ ${inputsValues.user()}
 🔒 ${inputsValues.password()}
 👤 ${inputsValues.profile()}
-➡️ CADUCA EL ${addThirtyDays()}
+➡️ CADUCA EL ${createExpirationDate()}
 
 𝚂𝙸𝙶𝚄𝙴𝙼𝙴 + 𝙲𝙾𝙼𝙴𝙽𝚃𝙰 + 𝙻𝙸𝙺𝙴 
 
@@ -195,7 +200,7 @@ buttons.prime.addEventListener("click", function() {
 🔒 ${inputsValues.password()}
 👤 ${inputsValues.profile()}
 🔐 ${inputsValues.pin() ? inputsValues.pin() : randomPin}
-➡️ CADUCA EL ${addThirtyDays()}
+➡️ CADUCA EL ${createExpirationDate()}
 
 ❌ *NO* REALIZAR COMPRAS  NI RENTAS DE PELICULAS
 
@@ -213,7 +218,7 @@ buttons.flujoTv1Device.addEventListener("click", function() {
 
 👤 ${inputsValues.user()}
 🔐 ${inputsValues.password()}
-➡️ CADUCA EL ${addThirtyDays()}
+➡️ CADUCA EL ${createExpirationDate()}
 
 𝚂𝙸𝙶𝚄𝙴𝙼𝙴 + 𝙲𝙾𝙼𝙴𝙽𝚃𝙰 + 𝙻𝙸𝙺𝙴 
 
@@ -229,7 +234,7 @@ buttons.flujoTv3Devices.addEventListener("click", function() {
 
 👤 ${inputsValues.user()}
 🔐 ${inputsValues.password()}
-➡️ CADUCA EL ${addThirtyDays()}
+➡️ CADUCA EL ${createExpirationDate()}
 
 𝚂𝙸𝙶𝚄𝙴𝙼𝙴 + 𝙲𝙾𝙼𝙴𝙽𝚃𝙰 + 𝙻𝙸𝙺𝙴 
 
@@ -245,7 +250,7 @@ buttons.spotify.addEventListener("click", function() {
 
 ✉️ ${inputsValues.user()}
 🔐 ${inputsValues.password()}
-➡️  CADUCA EL ${addThirtyDays()}
+➡️  CADUCA EL ${createExpirationDate()}
 
 𝚂𝙸𝙶𝚄𝙴𝙼𝙴 + 𝙲𝙾𝙼𝙴𝙽𝚃𝙰 + 𝙻𝙸𝙺𝙴 
 
@@ -261,7 +266,7 @@ buttons.youtube.addEventListener("click", function() {
 
 ✉️ ${inputsValues.user()}
 🔐 ${inputsValues.password()}
-➡️ CADUCA EL ${addThirtyDays()}
+➡️ CADUCA EL ${createExpirationDate()}
 
 𝚂𝙸𝙶𝚄𝙴𝙼𝙴 + 𝙲𝙾𝙼𝙴𝙽𝚃𝙰 + 𝙻𝙸𝙺𝙴 
 
@@ -278,7 +283,7 @@ buttons.crunchyroll.addEventListener("click", function() {
 ✉️ ${inputsValues.user()}
 🔒 ${inputsValues.password()}
 👤 ${inputsValues.profile()}
-➡️ CADUCA EL ${addThirtyDays()}
+➡️ CADUCA EL ${createExpirationDate()}
 
 𝚂𝙸𝙶𝚄𝙴𝙼𝙴 + 𝙲𝙾𝙼𝙴𝙽𝚃𝙰 + 𝙻𝙸𝙺𝙴 
 
