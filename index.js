@@ -112,7 +112,7 @@ document.getElementById("returnIcon").addEventListener("click", function() {
 
 buttons.netflix.addEventListener("click", function() {
   outputsElements.template.innerText = `*NETFLIX* 🤩
-1 ᴅɪꜱᴘᴏꜱɪᴛɪᴠᴏ | 30 ᴅɪᴀꜱ
+1 ᴅɪꜱᴘᴏꜱɪᴛɪᴠᴏ | ${inputsValues.days() || 30} ᴅɪᴀꜱ
 
 ✉️ ${inputsValues.user()}
 🔒 ${inputsValues.password()}
@@ -128,7 +128,7 @@ www.instagram.com/cryptos_streaming/`;
 
 buttons.disney.addEventListener("click", function() {
   outputsElements.template.innerText = `*DISNEY+* 🤩
-1 ᴅɪꜱᴘᴏꜱɪᴛɪᴠᴏ | 30 ᴅɪᴀꜱ
+1 ᴅɪꜱᴘᴏꜱɪᴛɪᴠᴏ | ${inputsValues.days() || 30} ᴅɪᴀꜱ
 
 ✉️ ${inputsValues.user()}
 🔒 ${inputsValues.password()}
@@ -144,7 +144,7 @@ www.instagram.com/cryptos_streaming/`;
 
 buttons.hbo.addEventListener("click", function() {
   outputsElements.template.innerText = `*HBO MAX* 🤩
-1 ᴅɪꜱᴘᴏꜱɪᴛɪᴠᴏ | 30 ᴅɪᴀꜱ
+1 ᴅɪꜱᴘᴏꜱɪᴛɪᴠᴏ | ${inputsValues.days() || 30} ᴅɪᴀꜱ
 
 ✉️ ${inputsValues.user()}
 🔒 ${inputsValues.password()}
@@ -160,7 +160,7 @@ www.instagram.com/cryptos_streaming/`;
 
 buttons.paramount.addEventListener("click", function() {
   outputsElements.template.innerText = `*PARAMOUNT+* 🤩
-1 ᴅɪꜱᴘᴏꜱɪᴛɪᴠᴏ | 30 ᴅɪᴀꜱ
+1 ᴅɪꜱᴘᴏꜱɪᴛɪᴠᴏ | ${inputsValues.days() || 30} ᴅɪᴀꜱ
 
 ✉️ ${inputsValues.user()}
 🔒 ${inputsValues.password()}
@@ -177,7 +177,7 @@ www.instagram.com/cryptos_streaming/`;
 
 buttons.vix.addEventListener("click", function() {
   outputsElements.template.innerText = `*VIX* 🤩
-1 ᴅɪꜱᴘᴏꜱɪᴛɪᴠᴏ | 30 ᴅɪᴀꜱ
+1 ᴅɪꜱᴘᴏꜱɪᴛɪᴠᴏ | ${inputsValues.days() || 30} ᴅɪᴀꜱ
 
 ✉️ ${inputsValues.user()}
 🔒 ${inputsValues.password()}
@@ -194,7 +194,7 @@ www.instagram.com/cryptos_streaming/`;
 
 buttons.prime.addEventListener("click", function() {
   outputsElements.template.innerText = `*PRIME VIDEO* 🤩
-1 ᴅɪꜱᴘᴏꜱɪᴛɪᴠᴏ | 30 ᴅɪᴀꜱ
+1 ᴅɪꜱᴘᴏꜱɪᴛɪᴠᴏ | ${inputsValues.days() || 30} ᴅɪᴀꜱ
 
 ✉️ ${inputsValues.user()}
 🔒 ${inputsValues.password()}
@@ -214,7 +214,7 @@ www.instagram.com/cryptos_streaming/`;
 
 buttons.flujoTv1Device.addEventListener("click", function() {
   outputsElements.template.innerText = `*FLUJOTV* 🤩
-1 ᴅɪꜱᴘᴏꜱɪᴛɪᴠᴏ | 30 ᴅɪᴀꜱ
+1 ᴅɪꜱᴘᴏꜱɪᴛɪᴠᴏ | ${inputsValues.days() || 30} ᴅɪᴀꜱ
 
 👤 ${inputsValues.user()}
 🔐 ${inputsValues.password()}
@@ -230,7 +230,7 @@ www.instagram.com/cryptos_streaming/`;
 
 buttons.flujoTv3Devices.addEventListener("click", function() {
   outputsElements.template.innerText = `*FLUJOTV* 🤩
-3 ᴅɪꜱᴘᴏꜱɪᴛɪᴠᴏs | 30 ᴅɪᴀꜱ
+3 ᴅɪꜱᴘᴏꜱɪᴛɪᴠᴏs | ${inputsValues.days() || 30} ᴅɪᴀꜱ
 
 👤 ${inputsValues.user()}
 🔐 ${inputsValues.password()}
@@ -246,7 +246,7 @@ www.instagram.com/cryptos_streaming/`;
 
 buttons.spotify.addEventListener("click", function() {
   outputsElements.template.innerText = `*SPOTIFY* 🤩
-1 ᴅɪꜱᴘᴏꜱɪᴛɪᴠᴏ | 30 ᴅɪᴀꜱ
+1 ᴅɪꜱᴘᴏꜱɪᴛɪᴠᴏ | ${inputsValues.days() || 30} ᴅɪᴀꜱ
 
 ✉️ ${inputsValues.user()}
 🔐 ${inputsValues.password()}
@@ -262,7 +262,7 @@ www.instagram.com/cryptos_streaming/`;
 
 buttons.youtube.addEventListener("click", function() {
   outputsElements.template.innerText = `*YOUTUBE PREMIUM + MUSIC* 🤩
-1 ᴅɪꜱᴘᴏꜱɪᴛɪᴠᴏ | 30 ᴅɪᴀꜱ
+1 ᴅɪꜱᴘᴏꜱɪᴛɪᴠᴏ | ${inputsValues.days() || 30} ᴅɪᴀꜱ
 
 ✉️ ${inputsValues.user()}
 🔐 ${inputsValues.password()}
