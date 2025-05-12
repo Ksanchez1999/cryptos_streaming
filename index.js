@@ -278,7 +278,7 @@ www.instagram.com/cryptos_streaming/`;
 
 buttons.crunchyroll.addEventListener("click", function() {
   outputsElements.template.innerText = `*CRUNCHYROLL* 🤩
-1 ᴅɪꜱᴘᴏꜱɪᴛɪᴠᴏ | ${inputsValues.days() ? inputsValues.days() : 30} ᴅɪᴀꜱ
+1 ᴅɪꜱᴘᴏꜱɪᴛɪᴠᴏ | ${inputsValues.days() || 30} ᴅɪᴀꜱ
 
 ✉️ ${inputsValues.user()}
 🔒 ${inputsValues.password()}
